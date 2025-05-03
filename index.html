@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pilot | portfolio</title>
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --fg: #f0f0f0;
+      --accent: #8f00ff;
+      --muted: #888;
+      --font: 'Segoe UI', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-transform: lowercase;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: var(--accent);
+    }
+
+    p {
+      margin-top: 0.5rem;
+      color: var(--muted);
+    }
+
+    nav {
+      margin: 2rem 0;
+    }
+
+    nav a {
+      margin-right: 1rem;
+      text-decoration: none;
+      color: var(--fg);
+      border-bottom: 2px solid transparent;
+      transition: border 0.3s;
+    }
+
+    nav a:hover {
+      border-bottom: 2px solid var(--accent);
+    }
+
+    section {
+      margin-bottom: 3rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: auto;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>pilot</h1>
+    <p>writer, programmer, and yonkagor enjoyer</p>
+  </header>
+
+  <nav>
+    <a href="#about">about</a>
+    <a href="#projects">projects</a>
+    <a href="#contact">contact</a>
+  </nav>
+
+  <section id="about" class="fade-in">
+    <h2>about me</h2>
+    <p>i'm pilot. i write code, i write words, and i explore ideas. my style is minimal, efficient, and expressive. i like working on things that feel like art.</p>
+  </section>
+
+  <section id="projects" class="fade-in">
+    <h2>projects</h2>
+    <p>i build tools, scripts, and frameworks. some of my work explores new syntax and interfaces. i'm into languages, games, and systems that make creativity easier.</p>
+    <ul>
+      <li>boopl — a custom programming language</li>
+      <li>pytanium — a console game engine</li>
+      <li>fossil — a project ecosystem for simple tools</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>contact</h2>
+    <p>reach me at <a href="mailto:pilot@example.com">pilot@example.com</a> or follow my thoughts on yonkagor.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 pilot. all lowercase, all dark.
+  </footer>
+
+  <script>
+    // simple fade-in animation
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('.fade-in').forEach((el, i) => {
+        el.style.animationDelay = `${i * 0.2}s`;
+      });
+    });
+  </script>
+</body>
+</html>
