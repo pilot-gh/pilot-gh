@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Stuff | Pilot</title>
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --fg: #f0f0f0;
+      --accent: #bb86fc;
+      --muted: #a0a0a0;
+      --font: 'Inter', 'Segoe UI', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 2rem;
+      line-height: 1.7;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: var(--accent);
+      text-transform: lowercase;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--fg);
+      text-transform: lowercase;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
+
+    nav a:hover {
+      border-color: var(--accent);
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h2, h3, h4 {
+      color: var(--accent);
+      margin-top: 2rem;
+      text-transform: lowercase;
+    }
+
+    ul {
+      list-style: disc inside;
+      margin-left: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .illustration {
+      width: 100%;
+      max-width: 800px;
+      margin: 2rem auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    footer {
+      margin-top: auto;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding-top: 2rem;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>pilot</h1>
+    <p>my stuff</p>
+  </header>
+
+  <nav>
+    <a href="../index.html">about me and contact</a>
+    <a href="index.html">writing and commisions</a>
+    <a href="../coding/index.html">coding and projects</a>
+  </nav>
+
+  <main class="fade-in">
+    <img src="pilot.png">
+    <ul>
+      <li>writing commissions are currently <span style="color:lightgreen;">open</span></li>
+      <li>prices are negotiable, i am willing to write/grammar check/refine text for free if i deem the work easy.</li>
+      <li>please give me time. if i don't respond to your message, i'm either sleeping or busy.</li>
+      <li><a href="mailto:pixilreal@gmail.com">get a writing commission</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    thanks for checking out my work.
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('.fade-in').forEach((el, i) => {
+        el.style.animationDelay = `${i * 0.2}s`;
+      });
+    });
+  </script>
+</body>
+</html>
