@@ -3,21 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pilot</title>
+  <title>Pilot | Writer & Programmer</title>
   <style>
     :root {
       --bg: #0d0d0d;
       --fg: #f0f0f0;
-      --accent: #8f00ff;
-      --muted: #888;
-      --font: 'Segoe UI', sans-serif;
+      --accent: #bb86fc;
+      --muted: #a0a0a0;
+      --font: 'Inter', 'Segoe UI', sans-serif;
     }
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      text-transform: lowercase;
     }
 
     body {
@@ -28,47 +27,92 @@
       flex-direction: column;
       min-height: 100vh;
       padding: 2rem;
+      line-height: 1.7;
     }
 
     header {
       margin-bottom: 2rem;
+      text-align: center;
     }
 
-    h1 {
-      font-size: 3rem;
+    header h1 {
+      font-size: 3.5rem;
       color: var(--accent);
+      text-transform: lowercase;
     }
 
-    p {
-      margin-top: 0.5rem;
+    header p {
       color: var(--muted);
+      font-size: 1.2rem;
     }
 
     nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
       margin: 2rem 0;
+      flex-wrap: wrap;
     }
 
     nav a {
-      margin-right: 1rem;
       text-decoration: none;
       color: var(--fg);
+      text-transform: lowercase;
       border-bottom: 2px solid transparent;
-      transition: border 0.3s;
+      transition: border-color 0.3s;
     }
 
     nav a:hover {
-      border-bottom: 2px solid var(--accent);
+      border-color: var(--accent);
     }
 
     section {
-      margin-bottom: 3rem;
-      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 3rem auto;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      text-transform: lowercase;
+    }
+
+    section h3 {
+      margin-top: 1.5rem;
+      color: var(--fg);
+      text-transform: lowercase;
+    }
+
+    ul {
+      list-style: disc inside;
+      margin-left: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    img.illustration {
+      width: 100%;
+      max-width: 800px;
+      margin: 2rem auto;
+      border-radius: 12px;
+      display: block;
+      object-fit: cover;
     }
 
     footer {
       margin-top: auto;
+      text-align: center;
       color: var(--muted);
-      font-size: 0.8rem;
+      font-size: 0.9rem;
+      padding-top: 2rem;
     }
 
     .fade-in {
@@ -99,20 +143,38 @@
 
   <section id="about" class="fade-in">
     <h2>about me</h2>
-    <p>i'm pilot. i write code, i write words, and i explore ideas. my style is minimal, efficient, and expressive. i like working on things that feel like art.</p>
+    <ul>
+      <li>he/him</li>
+      <li>gmt+1 (cet)</li>
+    </ul>
+    <p>i'm pilot. i write words, i write code, and i explore ideas. my style is minimal, efficient, and expressive. i like working on things that feel like art.</p>
+    <img src="https://source.unsplash.com/featured/?writing,notebook" alt="Writing illustration" class="illustration">
   </section>
 
   <section id="projects" class="fade-in">
-    <h2>wip projects</h2>
-    <p>i build tools, scripts, and apps. some of my work explores new syntax and interfaces. i'm into languages, frameworks, and systems that make creativity easier.</p>
+    <h2>my stuff</h2>
+
+    <h3>writing</h3>
     <ul>
-      <li>shiv - <a href="https://github.com/fossil-org/SHIV">https://github.com/fossil-org/SHIV</a></li>
+      <li>writing commissions are currently <span style="color:lightgreen;">open</span></li>
+      <li>prices negotiable; i'll often help with simple grammar or copy for free</li>
+      <li>please allow time — i may be asleep or busy</li>
+      <li><a href="mailto:pixilreal@gmail.com">get a writing commission</a></li>
     </ul>
+
+    <h3>coding</h3>
+    <p>i build tools, scripts, and apps. my work often explores new syntax and interfaces — i love languages and frameworks that empower creativity.</p>
+    
+    <h4>supported/wip projects</h4>
+    <ul>
+      <li><strong>shiv</strong> — <a href="https://github.com/fossil-org/SHIV" target="_blank">https://github.com/fossil-org/SHIV</a></li>
+    </ul>
+    <img src="https://source.unsplash.com/featured/?code,terminal" alt="Coding illustration" class="illustration">
   </section>
 
   <section id="contact" class="fade-in">
     <h2>contact</h2>
-    <p>reach me at <a href="mailto:pixilreal@gmail.com">pixilreal@gmail.com</a> for personal matters or <a href="mailto:fossil-org1@gmail.com">fossil-org1@gmail.com</a> for business matters or commisions.</p>
+    <p>reach me at <a href="mailto:pixilreal@gmail.com">pixilreal@gmail.com</a> for personal inquiries, or <a href="mailto:fossil-org1@gmail.com">fossil-org1@gmail.com</a> for business and commissions.</p>
   </section>
 
   <footer>
